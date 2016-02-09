@@ -1,0 +1,19 @@
+#! /usr/bin/python3
+from datetime import datetime
+from dateutil import parser
+
+with open('age.conf') as f_in:
+    data = f_in.readline()
+    birth = parser.parse(data)
+diff = datetime.now() - birth
+
+days = diff.days
+seconds = diff.days * 60 * 60 * 24 + diff.seconds
+
+print("Time since {}:".format(datetime.strftime(birth, "%I:%m %p, %b %d %Y")))
+print("{:>13,} years".format(diff.days//365))
+print("{:>13,} weeks".format(diff.days//7))
+print("{:>13,} days".format(diff.days))
+print("{:>13,} hours".format(seconds//3600))
+print("{:>13,} minutes".format(seconds//60))
+print("{:>13,} seconds".format(seconds))
