@@ -15,7 +15,7 @@ def main():
     gzip_size = len(zlib.compress(data))
     print 'gzip size %i (%i%%)' % (gzip_size, percent(gzip_size, size))
     bz2_size = len(bz2.compress(data))
-    print 'bz2 size %i (%i%%)' % (bz2_size, percent(bz2_size, size))
+    print 'bz2 size %i  (%i%%)' % (bz2_size, percent(bz2_size, size))
 
 
 def file_data():
