@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+import os 
+import sys
+from urllib.parse import quote_plus
+
+sys.argv.append("site:stackoverflow.com")
+query = quote_plus(' '.join(sys.argv[1:]))
+cmd = 'chromium-browser http://www.google.com/search?q={} > /dev/null'.format(query)
+os.system(cmd)  
