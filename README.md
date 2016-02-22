@@ -25,6 +25,16 @@ Time since XX:XX AM/PM, Month Day Year:
 $
 ```
 
+####eta
+Shows number of days until provided date
+```
+$ eta 2/29/16
+7 day(s) until 2/29/16
+$ eta 12-25-16
+307 day(s) until 12-25-16
+$
+```
+
 ####compressibility
 Shows how much space can be saved by compressing a *file* (does not work for directories).
 ```
