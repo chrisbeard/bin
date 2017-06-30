@@ -1,4 +1,4 @@
-#bin
+# bin
 
 **bin** is a collection of scripts and utilities that live in my Dropbox and are added to my path. At some point in time, each of these scripts seemed like a useful (or fun) thing to have.
 
@@ -9,7 +9,7 @@ By Chris Beard (https://github.com/chrisbeard).
 TODO
 
 
-##Contents
+## Contents
 
 #### age
 A reminder of how one has lived.
@@ -25,7 +25,7 @@ Time since XX:XX AM/PM, Month Day Year:
 $
 ```
 
-####eta
+#### eta
 Shows number of days until provided date
 ```
 $ eta 2/29/16
@@ -35,7 +35,7 @@ $ eta 12-25-16
 $
 ```
 
-####compressibility
+#### compressibility
 Shows how much space can be saved by compressing a *file* (does not work for directories).
 ```
 $ compressibility log.txt
@@ -45,7 +45,7 @@ bz2 size  4573 (20%)
 $
 ```
 
-####sizeof
+#### sizeof
 Shows the size of files and/or directories.
 ```
 $ sizeof *.txt *.zip
