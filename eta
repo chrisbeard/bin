@@ -7,12 +7,17 @@ if len(sys.argv) != 2:
     print("\nDate format: MM-DD-YY or MM/DD/YY")
     sys.exit(1)
 
-try:
-    user_date = sys.argv[1]
-    fmt_str = "%m-%d-%y" if '-' in user_date else "%m/%d/%y"
-    date = datetime.strptime(user_date, fmt_str).date()
-    today = datetime.today().date()
-    print("{} day(s) until {}".format((date-today).days, sys.argv[1]))
-except:
+arg = sys.argv[1]
+
+fmts = ["%m-%d-%y", "%m-%d-%Y", "%m-%d-%y", "%m-%d-%Y", "%Y-%m-%d", "%Y%m%d"]
+for fmt_str in fmts:
+    try:
+        date = datetime.strptime(arg, fmt_str).date()
+        today = datetime.today().date()
+        print("{} day(s) until {}".format((date-today).days, date))
+        break
+    except:
+        pass
+else:
     print("Invalid date format: must be MM-DD-YY or MM/DD/YY")
     sys.exit(1)
